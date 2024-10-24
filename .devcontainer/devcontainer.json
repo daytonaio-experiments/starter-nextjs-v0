@@ -1,0 +1,47 @@
+{
+    "name": "Next.js, React, Tailwind, and TypeScript",
+    "image": "ubuntu:22.04",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2.5.2": {
+            "username": "daytona",
+            "userUid": 1000,
+            "userGid": 1000,
+            "configureZshAsDefaultShell": true
+        },
+        "ghcr.io/devcontainers/features/node:1": {
+            "nodeGypDependencies": true,
+            "version": "lts",
+            "nvmVersion": "0.40.0"
+        },
+        "ghcr.io/devcontainers/features/git:1": {}
+    },
+    "overrideFeatureInstallOrder": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers/features/git",
+        "ghcr.io/devcontainers/features/node"
+    ],
+    "portsAttributes": {
+        "3000": {
+            "label": "Next.js App",
+            "onAutoForward": "notify"
+        },
+        "9229": {
+            "label": "Node.js Debugger",
+            "onAutoForward": "ignore"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "bradlc.vscode-tailwindcss",
+                "ms-vscode.vscode-typescript-next",
+                "mhutchie.git-graph"
+            ]
+        }
+    },
+    "workspaceFolder": "/workspaces/starter-v0-nextjs",
+    "onCreateCommand": "npm install",
+    "remoteUser": "daytona"
+}
