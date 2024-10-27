@@ -6,7 +6,7 @@ import { Modal } from '../components/ImagePopUp'
 
 export default function ImageDashboard() {
 
-  const defaultImageUrl = "https://files.oaiusercontent.com/file-mqS1lxXQCkJ5fXaShLtx9siA?se=2024-10-24T10%3A31%3A02Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D76e38b96-8167-4e35-9a93-21535bb10884.webp&sig=4eoXycJHiyjQxz4sLJu1GGXK5lKnThT5hQWwn/gRdd8%3D";
+  const defaultImageUrl = "/demo-ai-image.png";
   const [images] = useState([
     { id: 1, url: defaultImageUrl, prompt: 'A futuristic cityscape' },
     { id: 2, url: defaultImageUrl, prompt: 'A serene forest landscape' },

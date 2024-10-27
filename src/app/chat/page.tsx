@@ -123,8 +123,9 @@ export default function HomePage() {
                 />
               ) : (
                 <img
-                  src="https://files.oaiusercontent.com/file-mqS1lxXQCkJ5fXaShLtx9siA?se=2024-10-24T10%3A31%3A02Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D76e38b96-8167-4e35-9a93-21535bb10884.webp&sig=4eoXycJHiyjQxz4sLJu1GGXK5lKnThT5hQWwn/gRdd8%3D"
-                  className="w-full h-full object-cover"
+                src="/demo-ai-image.png"
+                alt="demo-ai-image"
+                className="w-full h-full object-cover"
                 />
               )}
             </div>
