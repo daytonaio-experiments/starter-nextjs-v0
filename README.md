@@ -1,14 +1,14 @@
 # AI Image Generator with Next.js, v0.dev, and Daytona
 
-This AI-powered image generator is built using **Next.js** and the **v0.dev**. It utilizes the Stable Diffusion API to generate images based on user-provided prompts. The project is pre-configured with a dev container for quick and easy development setup using Daytona.
+This AI-powered image generator is built using **Next.js** and **v0.dev**. It utilizes the Stable Diffusion API to generate images based on user-provided prompts. The project is pre-configured with a dev container for quick and easy development setup using Daytona.
 
 ![AI Image Generator](/assets/images/chat-page-image.png)
 
 ## Features
 
-- **Image Generation**: Generate images based on text prompts using Stable Diffusion API.
-- **Next.js and v0.dev**: Built with Next.js for the front end, with v0.dev simplifying the generation of react components.
-- **DevContainer Support**: Quickly spin up a fully configured development environment using [Daytona](https://daytona.io/).
+- **Image Generation:** Generate images based on text prompts using Stable Diffusion API.
+- **Next.js and v0.dev:** Next.js for the front end, with [v0.dev](https://v0.dev/) simplifying the generation of react components.
+- **DevContainer Support:** Quickly spin up a fully configured development environment using [Daytona](https://daytona.io/).
 
 ## Technologies Used
 
@@ -19,14 +19,14 @@ This AI-powered image generator is built using **Next.js** and the **v0.dev**. I
 - **Stable Diffusion API** - Uses Stable Diffusion to generate images based on user prompts.
 
 ### AI Tool:
-- **v0.dev** - A generative UI system developed by Vercel for react component generation.
+- **v0.dev** - A generative UI tool developed by Vercel for creating react components with minimal effort.
 
 ## Setting Up the Development Workspace
 
 **Requirements**
 
 - Installed Daytona and Docker.
-- Running Daytona server with `daytona serve`.
+- Running Daytona server with `daytona serve` command.
 
 **Steps to Set Up Daytona Workspace**
 
