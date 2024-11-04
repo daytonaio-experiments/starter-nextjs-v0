@@ -41,9 +41,6 @@
             ]
         }
     },
-    "remoteEnv": {
-        "STABLE_DIFFUSION_API_KEY": "${localEnv:API_KEY}"
-    },
     "workspaceFolder": "/workspaces/starter-v0-nextjs",
     "onCreateCommand": "npm install",
     "remoteUser": "daytona"
