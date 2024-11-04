@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
   const { prompt } = await req.json();
-  const apiKey = process.env.STABLE_DIFFUSION_API_KEY;
+  const apiKey = process.env.API_KEY;
 
   if (!prompt) {
     return NextResponse.json({ message: 'Prompt is required' }, { status: 400 });
