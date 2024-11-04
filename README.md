@@ -8,7 +8,7 @@ This AI-powered image generator is built using **Next.js** and **v0.dev**. It ut
 
 - **Image Generation:** Generate images based on text prompts using Stable Diffusion API.
 - **Next.js and v0.dev:** Next.js for the front end, with [v0.dev](https://v0.dev/) simplifying the generation of react components.
-- **DevContainer Support:** Quickly spin up a fully configured development environment using [Daytona](https://daytona.io/).
+- **Dev Container Support:** Quickly spin up a fully configured development environment using [Daytona](https://daytona.io/).
 
 ## Technologies Used
 
@@ -46,7 +46,7 @@ This AI-powered image generator is built using **Next.js** and **v0.dev**. It ut
     npm run dev
    ```
 
-## DevContainer Configuration
+## Dev Container Configuration
 
 This project includes a pre-configured dev container setup to facilitate seamless development in a containerized environment.
 
