@@ -14,11 +14,16 @@ export default function ImageDashboard() {
     { id: 4, url: defaultImageUrl, prompt: 'A portrait of a cyberpunk character' },
     { id: 5, url: defaultImageUrl, prompt: 'A surreal underwater scene' },
     { id: 6, url: defaultImageUrl, prompt: 'A steampunk-inspired machine' },
+    { id: 7, url: defaultImageUrl, prompt: 'A futuristic cityscape' },
+    { id: 8, url: defaultImageUrl, prompt: 'A serene forest landscape' },
+    { id: 9, url: defaultImageUrl, prompt: 'An abstract representation of AI' },
+    { id: 10, url: defaultImageUrl, prompt: 'A portrait of a cyberpunk character' },
   ])
 
   const [selectedImage, setSelectedImage] = useState<{ id: number, url: string, prompt: string } | null>(null)
 
   return (
+    <div className="flex flex-col bg-black text-white pb-4">
     <div className="min-h-screen flex flex-col bg-black text-white p-8">
       <header className="mb-8">
         <h1 className="text-3xl font-bold">Your AI Image History</h1>
@@ -48,6 +53,7 @@ export default function ImageDashboard() {
           </div>
         )}
       </Modal>
+      </div>
       <Footer />
     </div>
   )
