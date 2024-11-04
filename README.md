@@ -2,7 +2,9 @@
 
 This AI-powered image generator is built using **Next.js** and **v0.dev**. It utilizes the Stable Diffusion API to generate images based on user-provided prompts. The project is pre-configured with a dev container for quick and easy development setup using Daytona.
 
-![AI Image Generator](/assets/images/chat-page-image.png)
+![AI Image Generator-1](/assets/images/chat-page-image-1.png)
+
+![AI Image Generator-2](/assets/images/chat-page-image-2.png)
 
 ## Features
 
@@ -23,24 +25,19 @@ This AI-powered image generator is built using **Next.js** and **v0.dev**. It ut
 
 ## Setting Up the Development Workspace
 
-**Requirements**
+### Requirements
 
 - Installed Daytona and Docker.
 - Running Daytona server with `daytona serve` command.
 
-**Steps to Set Up Daytona Workspace**
+### Steps to Set Up Daytona Workspace
 
-1. Create and open the workspace in Daytona:
+**1. Create and open the workspace in Daytona:** Use the following command to initialize your Daytona workspace while passing the **Stable Diffusion API key** as a **remote environment variable**:
    
    ```bash
-   daytona create https://github.com/daytonaio-experiments/starter-nextjs-v0.git --code
+   daytona create https://github.com/daytonaio-experiments/starter-nextjs-v0.git --env "API_KEY=STABILITY_API_KEY"
    ```
-3. Create a **.env** file in your project's root directory and add your Stable Diffusion API key:
-
-   ```bash
-    API_KEY=your_stable_diffusion_api_key_here
-    ```
-3. Now run your Next.js application using:
+**2. Start your Next.js application:** After the workspace is created, start your development server:
 
    ```bash
     npm run dev
