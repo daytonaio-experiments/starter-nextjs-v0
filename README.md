@@ -1,1 +1,234 @@
-# starter-nextjs-v0
+# AI Image Generator with Next.js, v0.dev, and Daytona
+
+This AI-powered image generator is built using **Next.js** and **v0.dev**. It utilizes the Stable Diffusion API to generate images based on user-provided prompts. The project is pre-configured with a dev container for quick and easy development setup using Daytona.
+
+![AI Image Generator-1](/assets/images/chat-page-image-1.png)
+
+![AI Image Generator-2](/assets/images/chat-page-image-2.png)
+
+## Features
+
+- **Image Generation:** Generate images based on text prompts using Stable Diffusion API.
+- **Next.js and v0.dev:** Next.js for the front end, with [v0.dev](https://v0.dev/) simplifying the generation of react components.
+- **Dev Container Support:** Quickly spin up a fully configured development environment using [Daytona](https://daytona.io/).
+
+## Technologies Used
+
+### Frontend:
+- **Next.js** - A React-based framework for building fast and scalable web applications.
+  
+### API:
+- **Stable Diffusion API** - Uses Stable Diffusion to generate images based on user prompts.
+
+### AI Tool:
+- **v0.dev** - A generative UI tool developed by Vercel for creating react components with minimal effort.
+
+## Setting Up the Development Workspace
+
+### Requirements
+
+- Installed Daytona and Docker.
+- Running Daytona server with `daytona serve` command.
+
+### Steps to Set Up Daytona Workspace
+
+**1. Create and open the workspace in Daytona:** Use the following command to initialize your Daytona workspace while passing the **Stable Diffusion API key** as a **remote environment variable**:
+   
+   ```bash
+   daytona create https://github.com/daytonaio-experiments/starter-nextjs-v0.git --env "API_KEY=STABILITY_API_KEY"
+   ```
+**2. Start your Next.js application:** After the workspace is created, start your development server:
+
+   ```bash
+    npm run dev
+   ```
+
+## Dev Container Configuration
+
+This project includes a pre-configured dev container setup to facilitate seamless development in a containerized environment.
+
+`devcontainer.json`
+
+```json
+{
+    "name": "Next.js, React, Tailwind, and TypeScript",
+    "image": "ubuntu:22.04",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2.5.2": {
+            "username": "daytona",
+            "userUid": 1000,
+            "userGid": 1000,
+            "configureZshAsDefaultShell": true
+        },
+        "ghcr.io/devcontainers/features/node:1": {
+            "nodeGypDependencies": true,
+            "version": "lts",
+            "nvmVersion": "0.40.0"
+        },
+        "ghcr.io/devcontainers/features/git:1": {}
+    },
+    "overrideFeatureInstallOrder": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers/features/git",
+        "ghcr.io/devcontainers/features/node"
+    ],
+    "portsAttributes": {
+        "3000": {
+            "label": "Next.js App",
+            "onAutoForward": "notify"
+        },
+        "9229": {
+            "label": "Node.js Debugger",
+            "onAutoForward": "ignore"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "bradlc.vscode-tailwindcss",
+                "ms-vscode.vscode-typescript-next",
+                "mhutchie.git-graph"
+            ]
+        }
+    },
+    "workspaceFolder": "/workspaces/starter-v0-nextjs",
+    "onCreateCommand": "npm install",
+    "remoteUser": "daytona"
+
+```
+
+This configuration includes:
+
+- **name:** The environment name, "Next.js, React, Tailwind, and TypeScript".
+- **image:** The base image "ubuntu:22.04" for the container.
+- **features:** Pre-installed utilities, Node.js (LTS), and Git for user "daytona".
+- **overrideFeatureInstallOrder:** Orders feature installations for smooth setup.
+- **customizations:** Installs VSCode extensions for linting, formatting, Tailwind CSS, and TypeScript.
+- **portsAttributes:** Configures automatic port forwarding for the Next.js app on port 3000.
+- **workspaceFolder:** Sets the workspace directory to "/workspaces/starter-v0-nextjs".
+- **onCreateCommand:** Installs project dependencies on container creation.
+- **remoteUser:** Sets "daytona" as the development environment user.
+
+## Why Daytona?
+
+Daytona is a radically simple open source development environment manager.
+
+Setting up development environments has become increasingly challenging over time, especially when aiming to set up remotely, where the complexity increases by an order of magnitude. The process is so complex that we've compiled a comprehensive guide detailing all the necessary steps to set one up—spanning 5,000 words, 7 steps, and requiring anywhere from 15 to 45 minutes.
+
+This complexity is unnecessary.
+
+With Daytona, you need only to execute a single command: daytona create --code.
+
+Daytona automates the entire process; provisioning the instance, interpreting and applying the configuration, setting up prebuilds, establishing a secure VPN connection, securely connecting your local or a Web IDE, and assigning a fully qualified domain name to the development environment for easy sharing and collaboration.
+
+As a developer, you can immediately start focusing on what matters most—your code.
+
+## Quick Start
+### Mac / Linux
+```bash
+(curl -sf -L https://download.daytona.io/daytona/install.sh | sudo bash) && daytona server -y && daytona
+```
+### Windows
+<details>
+<summary>Windows PowerShell</summary>
+This command downloads and installs Daytona and runs the Daytona Server:
+
+```pwsh
+$architecture = if ($env:PROCESSOR_ARCHITECTURE -eq "AMD64") { "amd64" } else { "arm64" }
+md -Force "$Env:APPDATA\bin\daytona"; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]'Tls,Tls11,Tls12';
+Invoke-WebRequest -URI "https://download.daytona.io/daytona/latest/daytona-windows-$architecture.exe" -OutFile "$Env:APPDATA\bin\daytona\daytona.exe";
+$env:Path += ";" + $Env:APPDATA + "\bin\daytona"; [Environment]::SetEnvironmentVariable("Path", $env:Path, [System.EnvironmentVariableTarget]::User);
+daytona serve;
+```
+
+</details>
+
+### Create your first dev environment by opening a new terminal, and running:
+
+```bash
+daytona create --code
+```
+## Getting Started
+### Requirements
+Before starting the installation script, please go over all the necessary requirements:
+- __Hardware Resources__: Depending on the project requirements, ensure your machine has sufficient resources. Minimum hardware specification is 1cpu, 2GB of RAM and 10GB of disk space.
+- __Docker__: Ensure [Docker](https://www.docker.com/products/docker-desktop/) is installed and running.
+
+### Initializing Daytona
+To initialize Daytona, follow these steps:
+
+__1. Start the Daytona Server:__
+This initiates the Daytona Server in daemon mode. Use the command:
+```bash
+daytona server
+```
+__2. Add Your Git Provider of Choice:__
+Daytona supports GitHub, GitLab, Bitbucket, Bitbucket Server, Gitea, Gitness and Azure DevOps. To add them to your profile, use the command:
+```bash
+daytona git-providers add
+
+```
+Follow the steps provided.
+
+__3. Add Your Provider Target:__
+This step is for choosing where to deploy Development Environments. By default, Daytona includes a Docker provider to spin up environments on your local machine. For remote development environments, use the command:
+```bash
+daytona target set
+```
+Following the steps this command adds SSH machines to your targets.
+
+__4. Choose Your Default IDE:__
+The default setting for Daytona is VS Code locally. If you prefer, you can switch to VS Code - Browser or any IDE from the JetBrains portfolio using the command:
+```bash
+daytona ide
+```
+Now that you have installed and initialized Daytona, you can proceed to setting up your development environments and start coding instantly.
+
+
+### Creating Dev Environments
+Creating development environments with Daytona is a straightforward process, accomplished with just one command:
+```bash
+daytona create --code
+```
+
+You can skip the `--code` flag if you don't wish to open the IDE immediately after creating the environment.
+
+Upon executing this command, you will be prompted with two questions:
+1. Choose the provider to decide where to create a dev environment.
+2. Select or type the Git repository you wish to use to create a dev environment.
+
+After making your selections, press enter, and Daytona will handle the rest. All that remains for you to do is to execute the following command to open your default IDE:
+```bash
+daytona code
+```
+
+This command opens your development environment in your preferred IDE, allowing you to start coding instantly.
+
+### Stopping the Daytona Server:
+```bash
+daytona server stop
+```
+
+### Restarting the Daytona Server:
+```bash
+daytona server restart
+```
+
+
+## License
+
+This repository contains Daytona, covered under the [Apache License 2.0](https://github.com/daytonaio/daytona/blob/main/LICENSE), except where noted (any Daytona logos or trademarks are not covered under the Apache License, and should be explicitly noted by a LICENSE file.)
+
+Daytona is a product produced from this open source software, exclusively by Daytona Platforms, Inc. It is distributed under our commercial terms.
+
+Others are allowed to make their own distribution of the software, but they cannot use any of the Daytona trademarks, cloud services, etc.
+
+We explicitly grant permission for you to make a build that includes our trademarks while developing Daytona itself. You may not publish or share the build, and you may not use that build to run Daytona for any other purpose.
+## Code of Conduct
+
+This project has adapted the Code of Conduct from the [Contributor Covenant](https://www.contributor-covenant.org/). For more information see the [Code of Conduct](https://github.com/daytonaio/daytona/blob/main/CODE_OF_CONDUCT.md) or contact codeofconduct@daytona.io. with any additional questions or comments.
+## Questions
+
+For more information on how to use and develop Daytona, talk to us on [Slack](https://go.daytona.io/slack).

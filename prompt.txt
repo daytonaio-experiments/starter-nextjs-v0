@@ -1,0 +1,11 @@
+// First Prompt to v0.dev
+
+Create a React component called ImageGenerator for an AI image generator. The design should have a modern, minimalist black-and-white UI similar to Vercel and Daytona.io. The theme should include a simple and clean layout with minimal colors, using black, white, and subtle gray accents. Ensure that the text and buttons have modern styling with a slightly futuristic feel.
+
+The component should consist of the following features:
+
+A header with a logo and title "Unleash your Creativity with the power of Stable Diffusion." An input field where users can enter a text prompt to generate an image. A generate button that says "Generate Image." A placeholder where the generated image will be displayed, styled as a rounded rectangle with subtle shadows and borders. A dashboard button below the input field that says "Visit Dashboard" to view previously generated images, with a hover effect that makes it visually distinct. An image on right showing how generated image will look like. The layout should be centered vertically and horizontally on the page. Use Tailwind CSS classes for styling. Ensure the component is responsive and works on mobile and desktop. Add basic state management with React hooks for handling the input prompt and the generated image.
+
+// Second Prompt to v0.dev
+
+Create a History page that displays a history of generated images in a responsive grid. Each image should be clickable, expanding into a modal for a larger view. Style the layout using TailwindCSS with a dark theme. Show a "No Images Found" message if no images are available, and include hover effects on thumbnails for interactivity.
