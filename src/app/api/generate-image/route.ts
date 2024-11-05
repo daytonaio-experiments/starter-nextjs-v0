@@ -9,33 +9,27 @@ export async function POST(req: Request) {
   }
 
   try {
-    const response = await fetch('https://modelslab.com/api/v6/realtime/text2img', {
+    const formData = new FormData();
+    formData.append('prompt', prompt);
+    formData.append('output_format', 'png');
+
+    const response = await fetch('https://api.stability.ai/v2beta/stable-image/generate/core', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`,
+        'Accept': 'image/*',
       },
-      body: JSON.stringify({
-        "key": apiKey,
-        "prompt": prompt,
-        "negative_prompt": "bad quality",
-        "width": "512",
-        "height": "512",
-        "safety_checker": false,
-        "seed": null,
-        "samples": 1,
-        "base64": false,
-        "webhook": null,
-        "track_id": null
-      }),
+      body: formData,
     });
 
-    const data = await response.json();
-
     if (response.ok) {
-      const imageUrl = data['output'];
+      const buffer = await response.arrayBuffer();
+      const base64Image = Buffer.from(buffer).toString('base64');
+      const imageUrl = `data:image/png;base64,${base64Image}`;
       return NextResponse.json({ imageUrl }, { status: 200 });
     } else {
-      return NextResponse.json({ error: 'Failed to generate image' }, { status: 500 });
+      const errorText = await response.text();
+      return NextResponse.json({ error: `Failed to generate image: ${errorText}` }, { status: 500 });
     }
   } catch (error) {
     console.error(error);
