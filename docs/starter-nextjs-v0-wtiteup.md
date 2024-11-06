@@ -12,6 +12,8 @@ In this guide, we’ll walk through that process step by step. We’ll build an 
 
 For example, if you need a navigation bar with a logo and menu items, you can simply describe it, and v0 will provide the React code to implement it.
 
+![v0-ui-image](/docs/assets/v0-ui-image.png)
+
 ### Why Use v0 for Prototyping?
 
 Creating an app interface from scratch usually involves a lot of setup and coding. v0 makes this faster and easier by letting you build functional UI components with simple prompts. This means you can go from an idea to a working prototype in minutes.
