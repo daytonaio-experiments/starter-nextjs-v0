@@ -264,6 +264,7 @@ The project’s devcontainer.json file defines a standardized, containerized env
     "workspaceFolder": "/workspaces/starter-v0-nextjs",
     "onCreateCommand": "npm install",
     "remoteUser": "daytona"
+}
 ```
 
 **Configuration Highlights:**
