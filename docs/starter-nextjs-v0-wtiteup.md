@@ -194,7 +194,7 @@ Now that we have walked through building the app, here’s the complete codebase
 
 > Access the full codebase, including all components, configurations, and setup files discussed in this guide. Check out our GitHub repository: [https://github.com/daytonaio-experiments/starter-nextjs-v0](https://github.com/daytonaio-experiments/starter-nextjs-v0)
 
-To make setup quick and easy, we’ll use Daytona to clone and run this app. Daytona simplifies the process, creating a consistent and ready-to-use development environment. By using Daytona, you can avoid complex setup steps and jump straight into running and modifying the app.
+To make setup quick and easy, we’ll use [Daytona](https://www.daytona.io/) to clone and run this app. Daytona simplifies the process, creating a consistent and ready-to-use development environment. By using Daytona, you can avoid complex setup steps and jump straight into running and modifying the app.
 
 ### Setting Up the Development Workspace with Daytona
 
@@ -295,7 +295,7 @@ Using this setup, you’ll have a consistent development environment that is rea
 
 Well done! You’ve built an AI image generator app using v0, Stable Diffusion, and Next.js, transforming a simple prototype into a production-ready application.
 
-With v0, you quickly set up and refined the UI, and by integrating the Stable Diffusion API, you brought real functionality to your app. Using Daytona, you created a consistent development environment, making setup easy and efficient. Finally, by deploying with Vercel, you made your app accessible to users online, ready to generate images based on their prompts.
+With v0, you quickly set up and refined the UI, and by integrating the Stable Diffusion API, you brought real functionality to your app. Using [Daytona](https://www.daytona.io/), you created a consistent development environment, making setup easy and efficient. Finally, by deploying with Vercel, you made your app accessible to users online, ready to generate images based on their prompts.
 
 Now, you’re ready to customize and enhance your app further without worrying about setup inconsistencies. If you have questions or want support, feel free to reach out to the Daytona team on [Slack](https://go.daytona.io/slack) or explore the [GitHub repository](https://github.com/daytonaio/daytona) for more resources.
 
