@@ -41,8 +41,8 @@
             ]
         }
     },
+    "runArgs": ["--name=frontend-container"],
     "workspaceFolder": "/workspaces/starter-v0-nextjs",
     "onCreateCommand": "npm install",
-    "remoteUser": "daytona",
-    "runArgs": ["--network=host"]
+    "remoteUser": "daytona"
 }
