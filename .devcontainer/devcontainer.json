@@ -43,5 +43,6 @@
     },
     "workspaceFolder": "/workspaces/starter-v0-nextjs",
     "onCreateCommand": "npm install",
-    "remoteUser": "daytona"
+    "remoteUser": "daytona",
+    "runArgs": ["--network=host"]
 }
